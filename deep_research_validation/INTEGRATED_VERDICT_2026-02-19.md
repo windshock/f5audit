@@ -16,6 +16,7 @@
 - 분석 문서: `deep_research_validation/CODE_LEVEL_ANALYSIS_NONCVE_2026-02-19.md`
 - 토큰 재사용 동적 1차 검증 수행:
   - 초기(`비인증`) `MRHSession` replay 시 `/my.policy` 접근 불가(`302 -> /my.logout.php3?errorcode=20`)
+  - 디버깅 기반 코드증거로 token->session 변환 경로(OTC, `/vdesk/get_sessid_for_token.php3`) 확인
   - 문서: `deep_research_validation/TOKEN_REPLAY_DYNAMIC_CHECK_2026-02-19.md`
 
 ## Remaining to close 3 in-progress items

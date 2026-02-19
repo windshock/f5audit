@@ -33,3 +33,20 @@
   1. OTP 완료 직후의 실제 인증 세션 쿠키 캡처
   2. 동일 쿠키 replay 시 접근 결과 비교
   3. (선택) 출발지 IP 변경 replay 비교
+
+## Debug-route evidence (without MITM dependency)
+- Target binary: `C:\Program Files (x86)\F5 VPN\f5fpapi.dll`
+- String evidence confirms explicit session-token workflow and endpoints:
+  - `MRHSession`
+  - `Cookie: MRHSession=`
+  - `MRHSession=%s`
+  - `/my.logon.php3?outform=xml&get_token=1&client_version=2.0`
+  - `/vdesk/get_sessid_for_token.php3`
+  - `Failed to retrieve session ID from OTC token`
+  - `session Id(%1) retrieved for otc(%2)`
+  - `Authorization: Bearer %s`
+  - `/vdesk/sessioninfo?outform=xml`
+- Interpretation:
+  - 클라이언트 내부에 "token -> session id 변환(OTC 기반)" 로직이 존재함은 확인.
+  - 즉, 토큰 재사용 위험 검토 대상 시나리오는 코드상 유효.
+  - 다만, 실제 운영 세션에서 replay 성공/실패의 최종 판정은 런타임 세션값으로 추가 검증 필요.
