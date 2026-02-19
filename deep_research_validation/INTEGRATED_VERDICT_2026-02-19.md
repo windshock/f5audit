@@ -14,6 +14,9 @@
 ## New progress
 - 남은 3개(`installer/update trust chain`, `credential stuffing/brute-force`, `VPN proxy misuse`)에 대해 코드레벨 1차 분석 완료.
 - 분석 문서: `deep_research_validation/CODE_LEVEL_ANALYSIS_NONCVE_2026-02-19.md`
+- 토큰 재사용 동적 1차 검증 수행:
+  - 초기(`비인증`) `MRHSession` replay 시 `/my.policy` 접근 불가(`302 -> /my.logout.php3?errorcode=20`)
+  - 문서: `deep_research_validation/TOKEN_REPLAY_DYNAMIC_CHECK_2026-02-19.md`
 
 ## Remaining to close 3 in-progress items
 - `installer/update trust chain`: 서명 검증 실패 시 hard-fail 동작 증적(운영 로그/실행증적)
