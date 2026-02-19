@@ -1,0 +1,32 @@
+[
+  {
+    "cmd": [
+      "curl",
+      "-k",
+      "-I",
+      "--proxy",
+      "http://127.0.0.1:8080",
+      "https://vpn.skplanet.com/"
+    ],
+    "rc": 0,
+    "stdout": "HTTP/1.1 200 Connection established\n\nHTTP/1.1 404 Not Found\nServer: BigIP\nContent-Type: text/html; charset=utf-8\nAccept-Ranges: bytes\nConnection: close\nDate: Thu, 19 Feb 2026 06:15:26 GMT\nAge: 24495\nContent-Length: 3343\n\n",
+    "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0  3343    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+  },
+  {
+    "cmd": [
+      "curl",
+      "-k",
+      "--proxy",
+      "http://127.0.0.1:8080",
+      "https://vpn.skplanet.com/",
+      "-o",
+      "/dev/null",
+      "-s",
+      "-w",
+      "%{http_code}\\n"
+    ],
+    "rc": 0,
+    "stdout": "302\n",
+    "stderr": ""
+  }
+]

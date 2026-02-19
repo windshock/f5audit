@@ -1,0 +1,25 @@
+{
+  "id": "49fc63b6-a059-419f-ad14-f2b9acc6ef8c",
+  "request": {
+    "method": "GET",
+    "url": "https://vpn.skplanet.com/",
+    "headers": {
+      "Host": "vpn.skplanet.com",
+      "User-Agent": "curl/8.5.0",
+      "Accept": "*/*"
+    },
+    "body_preview": null
+  },
+  "response": {
+    "status_code": 302,
+    "headers": {
+      "Server": "BigIP",
+      "Content-Length": "0",
+      "Location": "/my.policy",
+      "Set-Cookie": "LastMRH_Session=4d5eda12;path=/;secure, MRHSession=4b49111d79103b90137784c94d5eda12;path=/;secure, MRHSHint=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/;secure",
+      "Connection": "close"
+    },
+    "body_preview": null
+  },
+  "curl_command": "curl -X GET https://vpn.skplanet.com/ -H 'Host: vpn.skplanet.com' -H 'User-Agent: curl/8.5.0' -H 'Accept: */*'"
+}

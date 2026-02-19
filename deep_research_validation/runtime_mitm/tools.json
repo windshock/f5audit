@@ -1,0 +1,17 @@
+[
+  "start_proxy",
+  "stop_proxy",
+  "set_scope",
+  "set_global_header",
+  "remove_global_header",
+  "get_traffic_summary",
+  "inspect_flow",
+  "search_traffic",
+  "clear_traffic",
+  "replay_flow",
+  "add_interception_rule",
+  "list_rules",
+  "clear_rules",
+  "get_api_patterns",
+  "detect_auth_pattern"
+]

@@ -1,0 +1,8 @@
+run_id=20260219_161504
+out_dir=/home/windshock/f5_artifacts_2026-02-19/parallel_tracks_2026-02-19/deep_research_validation/runtime_x64dbg/20260219_161504
+win_py_script=C:\Users\skplanet\Downloads\f5_deep_validation\x64dbg.py
+wsl_user=windshock
+wsl_host=DESKTOP-K420M8I
+wsl_kernel=Linux DESKTOP-K420M8I 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+timestamp_utc=2026-02-19T07:15:04Z
+timestamp_local=2026-02-19T16:15:04+0900
